@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>List of all users</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=userslist"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=userslist"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "User list" %}</h1>
+    </div>
+    <div class="wrapper-index">
+        <ul> <p>{% trans "All users" %}:</p>
+            {% for record in users %}
+                <li>{{ record.user.id }}, {% trans "username" %}: {{ record.user.username }}, {% trans "group" %}: {{ record.type }}
+                    {% if record.type != 'None' %}
+                        <a href="http://127.0.0.1:8000/{% trans "en" %}/deleteUser/?login={{ record.user.username }}">{% trans "Delete" %}</a>
+                    {% endif %}
+                </li>
+            {%endfor %}
+        </ul>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/adminMenu/">{% trans "Back to menu" %}</a>
+    </div>
+</body>
+</html>

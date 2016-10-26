@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+    {% load i18n %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>Admin page</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=admin"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=admin"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "Welcome ADMIN" %}</h1>
+    </div>
+<script>
+    function show() {
+        document.getElementById('popup-block').style.visibility = 'visible';
+    }
+</script>
+    <div class="left-nav">
+        <ul class="nav-bar">
+            <li class="nav"><button class="like-link" onclick="show()">{% trans "Add new teacher" %}</button> </li>
+
+           <li class="nav"> <form action="http://127.0.0.1:8000/{% trans "en" %}/userslist/" method="get">
+                    <input type="submit" class="like-link" value="{% trans "Show" %}"/>
+                </form>
+            </li>
+            <li class="nav"><a href="http://127.0.0.1:8000/{% trans "en" %}/checkAttendance/">{% trans "Check attendance" %}</a></li>
+            <li class="nav"><a href="http://127.0.0.1:8000/{% trans "en" %}/out/">{% trans "Log Out" %}</a></li>
+        </ul>
+    </div>
+            <div id="popup-block" style="visibility: hidden">
+                <div class="wrapper-popup-block">
+                    <form action="http://127.0.0.1:8000/{% trans "en" %}/addTeacher/" method="post">
+                        {% csrf_token %}
+                        <p>{% trans "Teacher name" %}</p>
+                        <input class="name-field" type="text" maxlength="30" name="tname" required />
+                        <input class="button-ok" type="submit" value="OK" />
+                    </form>
+                </div>
+            </div>
+</body>
+</html>

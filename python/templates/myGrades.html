@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>My grades</title>
+</head>
+<body>
+<div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=myGrades"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=myGrades"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "My grades" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/studentMenu/">{% trans "To main menu" %}</a>
+    </div>
+    <table>
+        <th>{% trans "Course name" %}</th>
+        <th>{% trans "Mark" %}</th>
+        <th>{% trans "Comment" %}</th>
+        {% for g in grades %}
+               <tr>
+               <td>{{ g.course.name }}</td>
+               <td>{{ g.mark }}</td>
+               <td>{{ g.comment }}</td>
+               </tr>
+            {% endfor %}
+    </table>
+</body>
+</html>

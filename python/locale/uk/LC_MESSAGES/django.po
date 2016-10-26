@@ -1,0 +1,222 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-10-20 19:26+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: .\templates\admin.html:14
+msgid "Welcome ADMIN"
+msgstr "Ласкаво просимо, Адмін"
+
+#: .\templates\admin.html:23
+msgid "Add new teacher"
+msgstr "Додати викладача"
+
+#: .\templates\admin.html:25 .\templates\admin.html:29
+#: .\templates\admin.html:30 .\templates\admin.html:35
+#: .\templates\allCourses.html:20 .\templates\courseDetails.html:20
+#: .\templates\coursesInfo.html:18 .\templates\estimation.html:15
+#: .\templates\estimation.html:18 .\templates\index.html:18
+#: .\templates\index.html:26 .\templates\myGrades.html:15
+#: .\templates\register.html:17 .\templates\register.html:25
+#: .\templates\student.html:17 .\templates\student.html:18
+#: .\templates\student.html:19 .\templates\teacher.html:30
+#: .\templates\teacher.html:34 .\templates\teacher.html:38
+#: .\templates\teacher.html:48 .\templates\userslist.html:21
+#: .\templates\userslist.html:26
+msgid "en"
+msgstr "uk"
+
+#: .\templates\admin.html:26 .\templates\teacher.html:31
+msgid "Show"
+msgstr "Усі користувачі"
+
+#: .\templates\admin.html:29
+msgid "Check attendance"
+msgstr "Журнал вівдідувань"
+
+#: .\templates\admin.html:30 .\templates\student.html:19
+#: .\templates\teacher.html:34
+msgid "Log Out"
+msgstr "Вийти"
+
+#: .\templates\admin.html:37
+#, fuzzy
+#| msgid "Username"
+msgid "Teacher name"
+msgstr "Логін"
+
+#: .\templates\allCourses.html:14
+msgid "All courses for student"
+msgstr "Всі курси для студента"
+
+#: .\templates\allCourses.html:15 .\templates\estimation.html:15
+#: .\templates\myGrades.html:15
+msgid "To main menu"
+msgstr "На головну"
+
+#: .\templates\allCourses.html:17
+msgid "Courses"
+msgstr "Курси"
+
+#: .\templates\allCourses.html:20
+msgid "Follow"
+msgstr "Записатися"
+
+#: .\templates\attendance.html:14
+msgid "Attendance"
+msgstr "Відвідуваність"
+
+#: .\templates\attendance.html:17 .\templates\userslist.html:17
+msgid "All users"
+msgstr "Всі користувачі"
+
+#: .\templates\attendance.html:19 .\templates\userslist.html:19
+#, fuzzy
+#| msgid "Username"
+msgid "username"
+msgstr "Логін"
+
+#: .\templates\attendance.html:19
+msgid "Time"
+msgstr "Час"
+
+#: .\templates\courseDetails.html:14 .\templates\courseDetails.html:16
+msgid "Details"
+msgstr "Подивитися деталі"
+
+#: .\templates\courseDetails.html:18 .\templates\myGrades.html:18
+#: .\templates\teacher.html:50
+#, fuzzy
+#| msgid "Username"
+msgid "Course name"
+msgstr "Логін"
+
+#: .\templates\courseDetails.html:18
+msgid "Student id"
+msgstr "Номер студента"
+
+#: .\templates\courseDetails.html:19
+msgid "Student name"
+msgstr "Логін"
+
+#: .\templates\courseDetails.html:20
+msgid "Estimate"
+msgstr "Оцінити"
+
+#: .\templates\coursesInfo.html:14
+msgid "All courses"
+msgstr "Всі курси"
+
+#: .\templates\coursesInfo.html:16
+msgid "List of my courses"
+msgstr "Список моїх курсів"
+
+#: .\templates\coursesInfo.html:18
+#, fuzzy
+#| msgid "Username"
+msgid "name"
+msgstr "Логін"
+
+#: .\templates\estimation.html:14
+msgid "Estimation"
+msgstr "Оцінювання"
+
+#: .\templates\estimation.html:22 .\templates\myGrades.html:19
+msgid "Mark"
+msgstr "Оцінка"
+
+#: .\templates\estimation.html:24 .\templates\myGrades.html:20
+msgid "Comment"
+msgstr "Коментар"
+
+#: .\templates\index.html:14
+msgid "Welcome to the university system!"
+msgstr "Ласкаво просимо до системи керування університетом"
+
+#: .\templates\index.html:20 .\templates\register.html:19
+msgid "Username"
+msgstr "Логін"
+
+#: .\templates\index.html:22 .\templates\register.html:21
+msgid "Password"
+msgstr "Пароль"
+
+#: .\templates\index.html:26 .\templates\register.html:25
+msgid "Don`t have account"
+msgstr "Не маю сторінки"
+
+#: .\templates\myGrades.html:14
+msgid "My grades"
+msgstr "Мої оцінки"
+
+#: .\templates\register.html:14
+msgid "Registration"
+msgstr "Регистрація"
+
+#: .\templates\student.html:14
+msgid "Student"
+msgstr "Студент"
+
+#: .\templates\student.html:17
+msgid "Follow course"
+msgstr "Записатися на курс"
+
+#: .\templates\student.html:18
+msgid "View grades"
+msgstr "Подивитися оцінки"
+
+#: .\templates\teacher.html:22
+msgid "Teacher"
+msgstr "Викладач"
+
+#: .\templates\teacher.html:25
+#, fuzzy
+#| msgid "Password"
+msgid "Change password"
+msgstr "Пароль"
+
+#: .\templates\teacher.html:27
+msgid "Add courses"
+msgstr "Додати курс"
+
+#: .\templates\teacher.html:40
+#, fuzzy
+#| msgid "Password"
+msgid "New password"
+msgstr "Пароль"
+
+#: .\templates\teacher.html:52
+msgid "Hours"
+msgstr "Години"
+
+#: .\templates\userslist.html:14
+msgid "User list"
+msgstr "Список користувачів"
+
+#: .\templates\userslist.html:19
+msgid "group"
+msgstr "Група"
+
+#: .\templates\userslist.html:21
+msgid "Delete"
+msgstr "Видалити"
+
+#: .\templates\userslist.html:26
+msgid "Back to menu"
+msgstr "На головну"

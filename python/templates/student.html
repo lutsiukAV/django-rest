@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>Student</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=student"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=student"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "Student" %}</h1>
+    </div>
+    <ul class="nav-bar">
+        <li class="nav"><a href="http://127.0.0.1:8000/{% trans "en" %}/showAllCourses/">{% trans "Follow course" %}</a></li>
+        <li class="nav"><a href="http://127.0.0.1:8000/{% trans "en" %}/viewGrades/">{% trans "View grades" %}</a></li>
+        <li class="nav"><a href="http://127.0.0.1:8000/{% trans "en" %}/out/">{% trans "Log Out" %}</a></li>
+    </ul>
+</body>
+</html>

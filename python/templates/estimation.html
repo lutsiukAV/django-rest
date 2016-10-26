@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <meta charset="UTF-8">
+    <title>Estimation</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=estimation"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=estimation"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "Estimation" %}</h1>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/teacherMenu/">{% trans "To main menu" %}</a>
+    </div>
+    <div class="wrapper-index">
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/estimate/" method="post">
+            {% csrf_token %}
+            <input type="number" style=" visibility: hidden" value="{{ id }}" name="sID"/>
+            <input type="number" style=" visibility: hidden" value="{{ cID }}" name="cID"/>
+            <p>{% trans "Mark" %}</p>
+            <input type="number" class="name-field" name="mark" required/><br>
+            <p>{% trans "Comment" %}</p>
+            <input type="text" class="name-field" name="comment" /><br>
+            <input type="submit" class="button-ok" value="OK"/>
+        </form>
+    </div>
+</body>
+</html>

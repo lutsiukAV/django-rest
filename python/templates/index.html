@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load i18n %}
+        <meta charset="UTF-8">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+        <title>Log in</title>
+    </head>
+    <body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=index"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=index"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center"> {% trans "Welcome to the university system!" %}</h1>
+    </div>
+        <p>{{ message }}</p>
+            <div class="wrapper-index">
+        <form action="http://127.0.0.1:8000/{% trans "en" %}/menu/" method="POST">
+            {% csrf_token %}
+            <p>{% trans "Username"%}</p>
+            <input class="name-field" type="text" name="login"  maxlength="30" required /> <br>
+            <p>{% trans "Password" %}</p>
+            <input class="name-field field2" type="password" name="password"  maxlength="30" required /> <br>
+            <input class="button-ok" type="submit" value="OK" />
+        </form>
+        <a href="http://127.0.0.1:8000/{% trans "en" %}/register/">{% trans "Don`t have account" %}</a>
+            </div>
+    </body>
+</html>

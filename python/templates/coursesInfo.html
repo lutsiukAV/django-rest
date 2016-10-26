@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>All Courses</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=coursesInfo"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=coursesInfo"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "All courses" %}</h1>
+    </div>
+    <ul> {% trans "List of my courses" %}
+        {% for c in courses %}
+            <li><a href="http://127.0.0.1:8000/{% trans "en" %}/courseDetails/?id={{ c.id }}"> {% trans "name" %}: {{ c.name }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

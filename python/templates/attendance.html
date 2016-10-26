@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load i18n %}
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static "style.css" %}">
+    <title>Attendance</title>
+</head>
+<body>
+    <div class="header">
+        <a href="http://127.0.0.1:8000/en/lang/?template=attendance"><img src="{% static "eng.jpg" %}" alt="US"></a>
+        <a href="http://127.0.0.1:8000/uk/lang/?template=attendance"><img src="{% static "ukr.jpg" %}" alt="UA"></a>
+        <h1 align="center">{% trans "Attendance" %}</h1>
+    </div>
+    <div class="wrapper-index">
+        <ul> <p>{% trans "All users" %}:</p>
+            {% for r in records %}
+                <li>{% trans "username" %}: {{ r.username }}, {% trans "Time" %}: {{ r.time}}
+                </li>
+            {%endfor %}
+        </ul>
+</body>
+</html>
